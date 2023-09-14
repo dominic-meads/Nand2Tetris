@@ -5,4 +5,10 @@ CHIP Xor {
   PARTS: 
     Not (in = a, out = Nota);
     Not (in = b, out = Notb);
-    Or (a = a, b = Notb, 
+    And (a = a, b = Notb, out = a_Or_Notb);
+    And (a = Nota, b = b, out = Nota_Or_b);
+    Or (a = a_Or_Notb, b = Notb_Or_a, out = out);
+
+}
+
+
