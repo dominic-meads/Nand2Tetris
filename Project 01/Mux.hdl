@@ -3,7 +3,12 @@ CHIP Mux {
   OUT out;
 
   PARTS: 
-    Not (in = a, out = Nota);
-    Not (in = b, out = Notb);
-    Not (in = sel, out = Notsel);
-    And (a = Nota
+    Not (in = a, out = nota);
+    Not (in = b, out = notb);
+    Not (in = sel, out = notsel);
+    And (a = nota, b = b, out = nota_and_b);
+    And (a = a, b = notb, out = a_and_notb);
+    And (a = nota_and_b, b = sel, out = nota_and_b_and_sel);
+    And (a = a_and_notb, b = notsel, out = a_and_notb_and_notsel);
+    And (a = a, b = b, out = a_and_b);
+    
