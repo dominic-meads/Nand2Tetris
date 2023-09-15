@@ -11,4 +11,8 @@ CHIP Mux {
     And (a = nota_and_b, b = sel, out = nota_and_b_and_sel);
     And (a = a_and_notb, b = notsel, out = a_and_notb_and_notsel);
     And (a = a, b = b, out = a_and_b);
+    Or (a = nota_and_b_and_sel, b = a_and_notb_and_notsel, out = nota_and_b_and_sel_OR_a_and_notb_and_notsel);
+    Or (a = nota_and_b_and_sel_OR_a_and_notb_and_notsel, b = a_and_b, out = out);
+
+}
     
