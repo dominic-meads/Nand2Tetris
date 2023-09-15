@@ -1,0 +1,9 @@
+CHIP Mux { 
+  IN a, b, sel;
+  OUT out;
+
+  PARTS: 
+    Not (in = a, out = Nota);
+    Not (in = b, out = Notb);
+    Not (in = sel, out = Notsel);
+    And (a = Nota
